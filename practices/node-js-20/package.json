@@ -1,0 +1,37 @@
+{
+  "name": "practice-node-20",
+  "version": "1.0.0",
+  "description": "Test new update of node.js 20",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "permission_model": "node --experimental-permission --allow-fs-write=/tmp/ --allow-fs-read=/mnt/c/Projects/NashTechGarage/nodejs_upgrade-version/practices/node-js-20/permission_model.js --allow-fs-read=/tmp/ permission_model.js",
+    "test_runner": "node test_runner.mjs",
+    "sea-inject-blob": "node --experimental-sea-config sea-config.json",
+    "sea-inject-blob-disable-warning": "node --experimental-sea-config sea-config-no-warning.json",
+    "copy-node": "cp $(command -v node) hello",
+    "inject-blob": "npx postject hello NODE_SEA_BLOB sea-prep.blob --sentinel-fuse NODE_SEA_FUSE_fce680ab2cc467b6e072b8b5df1996b2",
+    "generate-sea": "npm run sea-inject-blob & npm run copy-node & npm run inject-blob",
+    "generate-sea-disable-warning": "npm run sea-inject-blob-disable-warning & npm run copy-node & npm run inject-blob"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nashtech-garage/nodejs_upgrade-version.git"
+  },
+  "keywords": [
+    "node.js",
+    "v20"
+  ],
+  "author": "",
+  "license": "ISC",
+  "engines": {
+    "node": ">=20.0.0 <21.0.0"
+  },
+  "bugs": {
+    "url": "https://github.com/nashtech-garage/nodejs_upgrade-version/issues"
+  },
+  "homepage": "https://github.com/nashtech-garage/nodejs_upgrade-version#readme",
+  "devDependencies": {
+    "postject": "^1.0.0-alpha.6"
+  }
+}
