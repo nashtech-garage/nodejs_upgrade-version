@@ -1,2 +1,3 @@
-# nodejs_upgrade-version
-This repo shows how to upgrade node.js version from 12 to 20 (LTS current version)
+# Node.js Upgrade version
+
+This repo will track the change of Node.js version. Besides that, we will have practice to show new feature of Node.js version.
